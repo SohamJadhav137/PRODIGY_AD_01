@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if(btntext.equals("AC"))
         {
-            tv.setText("0");
+            tv.setText("");
             return;
         }
 
@@ -71,7 +71,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if(btntext.equals("DELETE"))
         {
-            data = data.substring(0,data.length()-1);
+            if(!data.equals(""))
+            {
+                data = data.substring(0,data.length()-1);
+            }
+            else
+            {
+                data = data.substring(0,data.length()-0);
+            }
         }
         else
         {
